@@ -4,14 +4,15 @@ import Home from "./pages/Home";
 import Saved from "./pages/Saved";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import Ticker from "./pages/Ticker"
 
 function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        {/* <Nav /> */}
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Ticker} />
           <Route exact path="/saved" component={Saved} />
           <Route component={NoMatch} />
         </Switch>
