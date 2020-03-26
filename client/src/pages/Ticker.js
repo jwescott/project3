@@ -33,12 +33,18 @@ export default class Ticker extends Component {
                        this.state.results.map(stock=>{
                       return (   <div>
 
-                            {
-                                stock.regularMarketPrice}
+                            {stock.regularMarketPrice}
+                                <br/>
  
                                { stock.regularMarketChange}
+                               <br/>
+
                                 {stock.regularMarketChangePercent}
+                                <br/>
+
                                 {stock.longName}
+                                <br/>
+
                                 {stock.symbol}
                             
 

@@ -5,6 +5,7 @@ import Saved from "./pages/Saved";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Ticker from "./pages/Ticker"
+import './App.css'
 
 function App() {
   return (
