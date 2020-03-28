@@ -3,6 +3,12 @@ var axios = require("axios")
 var db = require("../models")
 
 function apiRoutes(app) {
+
+    app.post("/api/stocks",function(req,res){
+        db.StockHistory.create(req.body).then(function(data){
+            res.json(data)
+        })
+    })
     app.post('/register', function (req, res) {
         console.log(req.body)
         var newUser = new db.User({

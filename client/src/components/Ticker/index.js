@@ -24,6 +24,13 @@ export default class Ticker extends Component {
             })
         })
     }
+
+    handFormSave = (newStock) => {
+        API.SaveStock(newStock).then((response) => {
+            console.log(response)
+           
+        })
+    }
     render() {
         return (
             <div>
@@ -49,7 +56,13 @@ export default class Ticker extends Component {
                                 <br />
 
                                 {stock.symbol}
-
+                               <br/>
+                               <button onClick={()=>{this.handFormSave({
+                                   stockName:stock.longName,
+                                   time:"",
+                                   price: stock.regularMarketPrice,
+                                   userID: sessionStorage.getItem("user")
+                               })}}>Save</button>
 
                             </div>
                             )

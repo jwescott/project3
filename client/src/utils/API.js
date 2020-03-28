@@ -18,6 +18,9 @@ export default {
   },
   Logout: function () {
     return axios.get("/logout")
+  },
+  SaveStock: function (userData) {
+    return axios.post("/api/stocks", userData)
   }
 }
 
