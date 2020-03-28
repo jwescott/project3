@@ -55,7 +55,7 @@ class Signup extends Component {
                                 /><br/><br/>
                                
                                 {/* <Link to="/">Login</Link> */}
-                                <btn onClick={this.handleSubmit}>Login</btn>
+                                <button onClick={this.handleSubmit}>Login</button>
                         
         </div>
         )

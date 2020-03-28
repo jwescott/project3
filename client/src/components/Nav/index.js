@@ -23,7 +23,7 @@ class Nav extends Component {
             <nav>
                 <h2> Stock Search </h2>
                 <ul className="nav-Links">
-                    <Link style= {navStyle} to= "/Ticker">
+                    <Link style= {navStyle} to= "/">
                     <li> Home </li>
                     </Link>
                     <Link style= {navStyle} to= "/Signup">
@@ -31,6 +31,9 @@ class Nav extends Component {
                     </Link>
                     <Link style= {navStyle} to= "/Login">
                     <li> Login </li>
+                    </Link>
+                    <Link style= {navStyle} to= "/Logout">
+                    <li> Logout </li>
                     </Link>
                     
                     

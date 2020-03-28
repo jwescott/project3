@@ -74,7 +74,7 @@ class Signup extends Component {
                                     onChange={this.handleChange}
                                 /><br/><br/>
                                 {/* <Link to="/">Login</Link> */}
-                                <btn onClick={this.handleSubmit}>Register</btn>
+                                <button onClick={this.handleSubmit}>Register</button>
                         
         </div>
         )

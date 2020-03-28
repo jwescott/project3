@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
+var passport = require('passport');
 
 // User Schema
 var UserSchema = mongoose.Schema({
@@ -74,24 +75,4 @@ passport.deserializeUser(function(id, done) {
   User.getUserById(id, function(err, user) {
     done(err, user);
   });
-});
-
-// Endpoint to login
-app.post('/login',
-  passport.authenticate('local'),
-  function(req, res) {
-    res.send(req.user);
-  }
-);
-
-// Endpoint to get current user
-app.get('/user', function(req, res){
-  res.send(req.user);
-})
-
-
-// Endpoint to logout
-app.get('/logout', function(req, res){
-  req.logout();
-  res.send(null)
 });

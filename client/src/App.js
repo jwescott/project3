@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 import Ticker from "./components/Ticker"
 import './App.css'
 import Login from "./pages/Login";
-
+import Logout from "./pages/Logout";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
           {/* <Route exact path="/Home" component={Ticker} /> */}
           <Route exact path="/Signup" component={Signup} />
           <Route path="/Login" exact component={Login} />
+          <Route path="/Logout" exact component={Logout} />
 
         </Switch>
       </div>
