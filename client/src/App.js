@@ -6,6 +6,8 @@ import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Ticker from "./pages/Ticker"
 import './App.css'
+import Login from "./pages/Login";
+
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route exact path="/" component={Ticker} />
           <Route exact path="/saved" component={Saved} />
           <Route component={NoMatch} />
+          <Route path="/login" exact component={Login} />
+
         </Switch>
       </div>
     </Router>
