@@ -9,7 +9,19 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.1",
-    "reactstrap": "^8.4.1"
+    "reactstrap": "^8.4.1",
+    "bcryptjs": "*",
+    "body-parser": "~1.15.2",
+    "cancan": "^3.1.0",
+    "cookie-parser": "~1.4.3",
+    "express": "~4.14.0",
+    "express-session": "~1.14.1",
+    "mongoose": "~4.13.1",
+    "passport": "~0.3.2",
+    "passport-facebook": "~2.1.1",
+    "passport-google-oauth": "~1.0.0",
+    "passport-local": "~1.0.0",
+    "passport-twitter": "~1.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

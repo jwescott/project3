@@ -1,77 +1,60 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import "./style.css";
-
+import React, {Component} from 'react';
+// import './App.css';
+import { Link } from 'react-router-dom';
+// import API from "../../utils/API";
+const navStyle = {
+    color: 'white'
+};
 class Nav extends Component {
-  state = {
-    open: false,
-    width: window.innerWidth
-  };
-
-  updateWidth = () => {
-    const newState = { width: window.innerWidth };
-
-    if (this.state.open && newState.width > 991) {
-      newState.open = false;
+    state = {
+        name: "", 
     }
-
-    this.setState(newState);
-  };
-
-  toggleNav = () => {
-    this.setState({ open: !this.state.open });
-  };
-
-  componentDidMount() {
-    window.addEventListener("resize", this.updateWidth);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWidth);
-  }
-
-  render() {
-    return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light mb-2">
-        <Link className="navbar-brand" to="/">
-          Google Books
-        </Link>
-        <button
-          onClick={this.toggleNav}
-          className="navbar-toggler"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`} id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link
-                onClick={this.toggleNav}
-                className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
-                to="/"
-              >
-                Search
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                onClick={this.toggleNav}
-                className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                to="/saved"
-              >
-                Saved
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    );
-  }
+    //  componentDidMount(){
+    //      API.getUser().then(user => {
+    //        console.log("user:",user.data.name)
+    //       this.setState({
+    //          name: user.data.name
+    //        })
+    //      })
+    //    }
+    
+    render(){
+        return (
+            <nav>
+                <h2> Stock Search </h2>
+                <ul className="nav-Links">
+                    <Link style= {navStyle} to= "/Ticker">
+                    <li> Home </li>
+                    </Link>
+                    <Link style= {navStyle} to= "/Signup">
+                    <li> Signup </li>
+                    </Link>
+                    <Link style= {navStyle} to= "/Login">
+                    <li> Login </li>
+                    </Link>
+                    
+                    
+                    {/* {console.log("getUser",this.state.name)}
+                   {
+                   this.state.name === undefined || this.state.name.length === 0 ? (
+                    <div>
+                    <Link style= {navStyle} to= "/Login">
+                    <li> Log In </li> 
+                    </Link>
+                    <Link style= {navStyle} to= "/Signup">
+                    <li> Sign Up </li>
+                    </Link>
+                    </div>
+                    ):(
+                    <Link style= {navStyle} to= "/Signout" onClick={() => this.setState({name:""})}>
+                    <li> Sign Out </li>  Hello {this.state.name}
+                    </Link>
+                    )
+                   } */}
+                </ul>
+            </nav>
+        );
+    }
 }
-
 export default Nav;
+
